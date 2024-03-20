@@ -55,7 +55,7 @@ export default async function Home() {
             ) : (
               <Link href="/sign-in">
                 <Button>
-                  !
+                  Ok I am in!
                   <LogIn className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
