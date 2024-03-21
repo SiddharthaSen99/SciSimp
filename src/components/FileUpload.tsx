@@ -66,31 +66,28 @@ const FileUpload = () => {
     },
   });
   return (
-    <div className="p-2 bg-white rounded-xl">
+    <div className="p-1 bg-white rounded-xl"> {/* Reduced outer padding for a tighter look */}
       <div
         {...getRootProps({
-          className:
-            "border-dashed border-2 rounded-xl cursor-pointer bg-gray-50 py-8 flex justify-center items-center flex-col",
+          className: "border-dashed border-2 rounded-xl cursor-pointer bg-gray-50 py-2 px-6 flex justify-center items-center flex-col min-h-[80px] max-w-md", // Further adjusted padding, reduced min-height, and adjusted max-width
         })}
       >
         <input {...getInputProps()} />
         {uploading || isLoading ? (
           <>
-            {/* loading state */}
-            <Loader2 className="h-10 w-10 text-blue-500 animate-spin" />
-            <p className="mt-2 text-sm text-slate-400">
-              Spilling Tea to GPT...
-            </p>
+            <Loader2 className="h-8 w-8 text-blue-500 animate-spin" /> {/* Scaled down icons */}
+            <p className="mt-1 text-xs text-slate-400">Spilling Tea to GPT...</p> {/* Reduced margin-top and font size */}
           </>
         ) : (
           <>
-            <Inbox className="w-10 h-10 text-blue-500" />
-            <p className="mt-2 text-sm text-slate-400">Drop PDF Here</p>
+            <Inbox className="w-8 h-8 text-blue-500" /> {/* Scaled down icons */}
+            <p className="mt-1 text-xs text-slate-400">New Conversation</p> {/* Reduced margin-top and font size */}
           </>
         )}
       </div>
     </div>
   );
 };
+
 
 export default FileUpload;

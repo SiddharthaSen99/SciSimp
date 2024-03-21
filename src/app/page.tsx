@@ -24,48 +24,64 @@ export default async function Home() {
   }
 
   return (
-    <div className="w-screen min-h-screen bg-gradient-to-r from-rose-100 to-teal-100 flex justify-center items-center p-4">
+    // <div className="w-screen min-h-screen bg-gradient-to-r from-rose-100 to-teal-100 flex justify-center items-center p-4">
+    <div className="w-screen min-h-screen bg-gradient-to-r from-blue-200 to-green-200 flex flex-col justify-start items-center pt-20 p-4">
       <div className="text-center">
         <h1 className="text-5xl font-bold mb-2">SciSimp - Science Simplified</h1>
-        
+        <div className='flex justify-center'>
+        <UserButton afterSignOutUrl="/" />
+        </div>
         <div className="inline-block relative mb-2" style={{ width: '400px', height: 'auto' }}>
           <Image
             src="/images/SciSimp_logo.png"
             alt="SciSimp Logo"
-            layout="intrinsic"
             width={400}
             height={400} // Adjust the height as needed
+            layout = "intrinsic"
           />
         </div>
 
         <h2 className="text-3xl font-semibold mb-4">Chat about your scientific documents with your AI study buddy</h2>
         
         <div className="flex flex-col items-center">
+
+        <p className="max-w-xl mt-4 text-lg text-slate-600 mb-4">
+            Made with ❤️ for students, researchers, and professionals to instantly answer questions and understand research with AI.
+          </p>
+
           {isAuth && firstChat && (
             <>
               <Link href={`/chat/${firstChat.id}`}>
                 <Button className="mb-3">
-                  Go to Chats <ArrowRight className="ml-2" />
+                  View My Chats
                 </Button>
               </Link>
               <SubscriptionButton isPro={isPro} />
             </>
           )}
 
-          <p className="max-w-xl mt-4 text-lg text-slate-600">
-            Made with ❤️ for students, researchers, and professionals to instantly answer questions and understand research with AI.
-          </p>
-
           {isAuth ? (
-            <FileUpload />
+            <div className="mt-4"> {/* Add space above FileUpload */}
+            <FileUpload/>
+          </div>
           ) : (
             <Link href="/sign-in">
-              <Button className="mt-4">
+              <Button className="mt-8">
                 Count me in! <LogIn className="w-4 h-4 ml-2" />
               </Button>
             </Link>
           )}
         </div>
+        <div className="mt-8 text-center">
+        <h2 className="text-2xl font-semibold mb-4">See Our App in Action</h2>
+        <Image
+          src="/images/SciSimp_working.png" // Ensure the path is correct
+          alt="App Demo"
+          width={800} // Adjust as necessary
+          height={450}
+          layout="intrinsic"
+        />
+      </div>
       </div>
     </div>
   );

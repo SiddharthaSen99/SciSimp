@@ -3,7 +3,7 @@ import { DrizzleChat } from "@/lib/db/schema";
 import Link from "next/link";
 import React from "react";
 import { Button } from "./ui/button";
-import { MessageCircle, PlusCircle } from "lucide-react";
+import { MessageCircle, PlusCircle, LucideArrowLeft } from "lucide-react";
 import { cn } from "@/lib/utils";
 import axios from "axios";
 import SubscriptionButton from "./SubscriptionButton";
@@ -21,8 +21,8 @@ const ChatSideBar = ({ chats, chatId, isPro }: Props) => {
     <div className="w-full h-screen overflow-scroll soff p-4 text-gray-200 bg-gray-900">
       <Link href="/">
         <Button className="w-full border-dashed border-white border">
-          <PlusCircle className="mr-2 w-4 h-4" />
-          New Chat
+          <LucideArrowLeft className="mr-2 w-4 h-4" />
+          SciSimp Home Page
         </Button>
       </Link>
 

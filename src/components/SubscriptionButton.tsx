@@ -19,9 +19,14 @@ const SubscriptionButton = (props: Props) => {
     }
   };
   return (
-    <Button disabled={loading} onClick={handleSubscription} variant="outline">
-      {props.isPro ? "Manage Subscriptions" : "Get Pro"}
-    </Button>
+    <Button
+  disabled={loading}
+  onClick={handleSubscription}
+  className={`${loading ? 'bg-yellow-400' : 'bg-yellow-400 hover:bg-yellow-500'} text-black`}
+>
+  {props.isPro ? "Manage Subscriptions" : "Upgrade to Pro"}
+</Button>
+
   );
 };
 
