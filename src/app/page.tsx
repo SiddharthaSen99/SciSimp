@@ -78,7 +78,7 @@ export default async function Home() {
           src="/images/SciSimp_working.png" // Ensure the path is correct
           alt="App Demo"
           width={800} // Adjust as necessary
-          height={450}
+          height={400}
           layout="intrinsic"
         />
       </div>
