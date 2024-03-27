@@ -65,7 +65,7 @@ export default async function Home() {
             <FileUpload/>
           </div>
           ) : (
-            <Link href="/sign-in">
+            <Link href="/sign-up">
               <Button className="mt-8">
                 Count me in! <LogIn className="w-4 h-4 ml-2" />
               </Button>
