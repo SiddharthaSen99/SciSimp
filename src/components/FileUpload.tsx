@@ -21,7 +21,7 @@ const FileUpload = () => {
       file_key: string;
       file_name: string;
     }) => {
-      const response = await axios.post("https://www.scisimp.com/" + "/api/create-chat", {
+      const response = await axios.post("https://www.scisimp.com" + "/api/create-chat", {
         file_key,
         file_name,
       });
