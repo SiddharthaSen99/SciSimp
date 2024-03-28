@@ -23,8 +23,10 @@ export default async function Home() {
     }
   }
 
+  console.log("isAuth: ", isAuth)
+  console.log("userId:", userId) 
+
   return (
-    console.log("isAuth: ", isAuth),
     // <div className="w-screen min-h-screen bg-gradient-to-r from-rose-100 to-teal-100 flex justify-center items-center p-4">
     <div className="w-screen min-h-screen bg-gradient-to-r from-blue-200 to-green-200 flex flex-col justify-start items-center pt-20 p-4">
       <div className="text-center">

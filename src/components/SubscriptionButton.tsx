@@ -24,7 +24,7 @@ const SubscriptionButton = (props: Props) => {
   onClick={handleSubscription}
   className={`${loading ? 'bg-yellow-400' : 'bg-yellow-400 hover:bg-yellow-500'} text-black`}
 >
-  {props.isPro ? "Manage Subscriptions" : "Upgrade to Pro"}
+  {props.isPro ? "Manage Subscriptions" : "Take my money!"}
 </Button>
 
   );

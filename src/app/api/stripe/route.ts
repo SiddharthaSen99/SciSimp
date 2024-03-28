@@ -45,7 +45,7 @@ export async function GET() {
             currency: "usd",
             product_data: {
               name: "SciSimp",
-              description: "Upgrade for unlimited conversations!",	
+              description: "Make me even happier :)",	
             },
             unit_amount: 1799,
             recurring: {
