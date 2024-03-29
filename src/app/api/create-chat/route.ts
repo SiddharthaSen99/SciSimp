@@ -23,7 +23,7 @@ export async function POST(req: Request, res: Response) {
         pdfName: file_name,
         pdfUrl: getS3Url(file_key),
         userId,
-      })
+      })  
       .returning({
         insertedId: chats.id,
       });
