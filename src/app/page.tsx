@@ -70,7 +70,7 @@ export default async function Home() {
           ) : (
             <Link href="/sign-in">
               <Button className="mt-8">
-                Count me in! <LogIn className="w-4 h-4 ml-2" />
+                Try It Out <LogIn className="w-4 h-4 ml-2" />
               </Button>
             </Link>
           )}
